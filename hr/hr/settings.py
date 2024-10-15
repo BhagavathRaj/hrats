@@ -63,6 +63,16 @@ CORS_ALLOWED_ORIGINS = [
 ]
 CORS_ALLOW_CREDENTIALS = True
 
+APPEND_SLASH = False
+# Email backend settings for Elastic Email
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.elasticemail.com'  # Elastic Email SMTP host
+EMAIL_PORT = 2525  # Elastic Email SMTP port
+EMAIL_HOST_USER = 'info@adityatrading.com'  # Your Elastic Email user (email)
+EMAIL_HOST_PASSWORD = '374A5F9E4AA574EA78571B048B93D4337D16'  # Your Elastic Email API key or password
+EMAIL_USE_TLS = True  # Use TLS for secure connection
+EMAIL_USE_SSL = False  # Don't use SSL since TLS is enabled
+
 
 ROOT_URLCONF = 'hr.urls'
 
